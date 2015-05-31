@@ -1,3 +1,4 @@
 http://pandas.pydata.org/pandas-docs/stable/
 https://bitbucket.org/hrojas/learn-pandas
 https://www.udacity.com/wiki/cs101/%3A-python-reference
+https://github.com/ivanov/vim-ipython#id2
