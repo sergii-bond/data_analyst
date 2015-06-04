@@ -2,3 +2,30 @@ http://pandas.pydata.org/pandas-docs/stable/
 https://bitbucket.org/hrojas/learn-pandas
 https://www.udacity.com/wiki/cs101/%3A-python-reference
 https://github.com/ivanov/vim-ipython#id2
+https://pypi.python.org/pypi/pandasql
+http://www.sqlite.org/lang.html
+
+http://www.last.fm/api
+https://docs.python.org/2/library/pprint.html
+https://dev.mysql.com/doc/refman/5.1/en/counting-rows.html
+
+CSV reader/writer intro tutorial
+http://goo.gl/HBbvyy 
+https://docs.python.org/2/library/csv.html#examples
+
+http://docs.python.org/2/library/datetime.html#datetime.datetime.strptime
+
+http://docs.scipy.org/doc/scipy/reference/stats.html
+
+http://statsmodels.sourceforge.net/0.5.0/generated/statsmodels.regression.linear_model.OLS.html
+
+http://scikit-learn.org/0.14/modules/generated/sklearn.linear_model.LinearRegression.html
+http://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.mannwhitneyu.html
+http://docs.scipy.org/doc/numpy/reference/generated/numpy.mean.html
+
+
+A quick overview on dimensionality reduction and PCA (principal component analysis)
+http://georgemdallas.wordpress.com/2013/10/30/principal-component-analysis-4-dummies-eigenvectors-eigenvalues-and-dimension-reduction/
+
+You can read a bit about using matplotlib and pandas to plot histograms here:
+    http://pandas.pydata.org/pandas-docs/stable/visualization.html#histograms

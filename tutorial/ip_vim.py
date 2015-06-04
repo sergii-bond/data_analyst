@@ -129,6 +129,8 @@ np.where([[3, 1], [1, 2]])
         #Series: no axis argument needed
         #DataFrame: “index” (axis=0, default), “columns” (axis=1)
         #Panel: “items” (axis=0), “major” (axis=1, default), “minor” (axis=2)
+
+s.mean()
 df
 df.mean(0)
 df.mean(1)
@@ -383,6 +385,7 @@ df[df['A'] > 0]
 df2 = pd.DataFrame({'a' : ['one', 'one', 'two', 'three', 'two', 'one', 'six'],
    'b' : ['x', 'y', 'y', 'x', 'y', 'x', 'x'],
    'c' : np.random.randn(7)})
+df2.columns.values
 df2
 criterion = df2['a'].map(lambda x: x.startswith('t'))
 criterion
@@ -393,3 +396,29 @@ df2[[x.startswith('t') for x in df2['a']]]
 
 df2[criterion & (df2['b'] == 'x')]
 df2.loc[criterion & (df2['b'] == 'x'),'b':'c']
+
+s = pd.Series(np.arange(5),index=np.arange(5)[::-1],dtype='int64')
+s
+s.isin([2, 4, 6])
+s[s.isin([2, 4, 6])]
+s[s.index.isin([2, 4, 6])]
+s[[2, 4, 6]] #for comparison
+
+np.random.randint(0, 2)
+
+s1 = pd.Series([1,2,3,4,6,8,12])
+s1
+s1.diff()
+
+#shapiro test for normality
+w,p = scipy.stats.shapiro(data)
+u, p = scipy.stats.mannwhitneyu(x, y)
+
+#numpy
+x = np.array([1, 2, 3])
+x
+y = x - np.mean(x)
+y
+y^2
+pow(-1.0, 2)
+np.repeat(2, 4)
