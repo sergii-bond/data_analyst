@@ -8,6 +8,7 @@ s
 df = pd.DataFrame(np.random.randn(8, 3), index=index,
                columns=['A', 'B', 'C'])
 df
+df[1:3]
 
 np.random.randn(2, 5, 4)
 wp = pd.Panel(np.random.randn(2, 5, 4), items=['Item1', 'Item2'],
@@ -422,3 +423,6 @@ y
 y^2
 pow(-1.0, 2)
 np.repeat(2, 4)
+a = np.array([[1,2], [3,4]])
+a
+np.insert(a, 1, 5, axis = 1)

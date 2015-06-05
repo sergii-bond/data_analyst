@@ -29,3 +29,14 @@ http://georgemdallas.wordpress.com/2013/10/30/principal-component-analysis-4-dum
 
 You can read a bit about using matplotlib and pandas to plot histograms here:
     http://pandas.pydata.org/pandas-docs/stable/visualization.html#histograms
+
+http://www.itl.nist.gov/div898/handbook/pri/section2/pri24.htm
+ 
+ Scikit Learn uses gradient descent in its SGDRegressor
+ http://scikit-learn.org/0.14/modules/generated/sklearn.linear_model.SGDRegressor.html
+
+ http://courses.ischool.berkeley.edu/i247/f05/readings/Cleveland_GraphicalPerception_Science85.pdf
+
+ggplot doc:
+http://ggplot.yhathq.com/docs/index.html
+https://pypi.python.org/pypi/ggplot/
