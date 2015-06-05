@@ -38,7 +38,7 @@ Null hypothesis: Average numbers of entries per hour are the same on rainy or no
 Alternative Hypothesis: Average numbers of entries per hour are different on rainy or non-rainy days.  
 Type of test: Mann-Whitney U test  
 Two tailed p value: p = 0.0498  
-Given significance level of 5% the results are statistically significant and the average usage of subway on rainy days differs from the usage on non-rainy days.  
+Given significance level of 5% the results are statistically significant and the average usage of subway on rainy days statistically differs from the usage on non-rainy days.  
 
 ##Problem Set 4:
 Task #| Task Header | Code/Answer
