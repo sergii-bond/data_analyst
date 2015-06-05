@@ -34,7 +34,7 @@ def fix_turnstile_data(filenames):
     Sample updated file:
     https://www.dropbox.com/s/074xbgio4c39b7h/solution_turnstile_110528.txt
     '''
-    filenames = ["turnstile_110507.txt"] 
+    #filenames = ["turnstile_110507.txt"] 
     for name in filenames:
         # your code here
         f_in = open(name, 'r')
