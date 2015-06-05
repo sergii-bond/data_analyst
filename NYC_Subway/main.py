@@ -14,11 +14,14 @@ import compute_r_squared as r2
 import plot_residuals as pr
 
 dataframe = pd.read_csv("turnstile_data_master_with_weather.csv")
-#dataframe = dataframe[0:100]
+dataframe = dataframe[0:10000]
+df = dataframe
+df.columns.values
+df['ENTRIESn_hourly'].corr(df['meantempi'])
 y = dataframe['ENTRIESn_hourly']
-#g = lrp.predictions(dataframe)
-g = sgd.predictions(dataframe)
+g = lrp.predictions(dataframe)
+#g = sgd.predictions(dataframe)
 
 print r2.compute_r_squared(y, g) 
-hist = pr.plot_residuals(dataframe, g)
-hist.show()
+#hist = pr.plot_residuals(dataframe, g)
+#hist.show()

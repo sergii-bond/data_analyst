@@ -1,6 +1,7 @@
 import numpy as np
 import pandas as pd
 import statsmodels.api as sm
+import datetime
 
 """
 In this question, you need to:
@@ -66,7 +67,12 @@ def predictions(dataframe):
     smaller number of features.
     '''
     # Select Features (try different features!)
-    features = dataframe[['rain', 'precipi', 'Hour', 'meantempi']]
+    dataframe['DATEn'] = dataframe.DATEn.apply(lambda x:
+            datetime.datetime.strptime(x, "%Y-%m-%d"))
+    dataframe['day_of_week'] = dataframe['DATEn'].apply(lambda
+            x: x.weekday())
+    dataframe['minute'] = dataframe['TIMEn'].apply(lambda x: int(str.split(x, ':')[1]))
+    features = dataframe[['Hour', 'day_of_week', 'minute']]
     
     # Add UNIT to features using dummy variables
     dummy_units = pd.get_dummies(dataframe['UNIT'], prefix='unit')

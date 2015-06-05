@@ -1,6 +1,7 @@
 import numpy as np
 import pandas as pd
 from sklearn.linear_model import SGDRegressor
+import datetime
 
 """
 In this question, you need to:
@@ -43,7 +44,7 @@ def linear_regression(features, values):
     #features = normalized_features_array
     #values = values_array
     #features = np.insert(features, 0, 1, axis = 1)
-    model = SGDRegressor()
+    model = SGDRegressor(n_iter = 60)
     results = model.fit(features, values)
     intercept = results.intercept_
     params = results.coef_
@@ -77,7 +78,13 @@ def predictions(dataframe):
     smaller number of features or fewer iterations.
     '''
     # Select Features (try different features!)
-    features = dataframe[['rain', 'precipi', 'Hour', 'meantempi']]
+    #features = dataframe[['rain', 'precipi', 'Hour', 'meantempi']]
+    dataframe['DATEn'] = dataframe.DATEn.apply(lambda x:
+            datetime.datetime.strptime(x, "%Y-%m-%d"))
+    dataframe['day_of_week'] = dataframe['DATEn'].apply(lambda
+            x: x.weekday())
+    dataframe['minute'] = dataframe['TIMEn'].apply(lambda x: int(str.split(x, ':')[1]))
+    features = dataframe[['Hour', 'day_of_week', 'minute']]
     
     # Add UNIT to features using dummy variables
     dummy_units = pd.get_dummies(dataframe['UNIT'], prefix='unit')
