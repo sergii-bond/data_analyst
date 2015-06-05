@@ -1,3 +1,7 @@
+#Project Overview
+In this project, we look at the NYC Subway data and figure out if more people ride the subway when it is raining versus when it is not raining.  
+We wrangle the NYC subway data, use statistical methods and data visualization to draw an interesting conclusion about the subway dataset that we've analyzed.
+
 #Solutions to problem sets in Udacity *Intro to Data Science* course
 
 ##Problem Set 2:
@@ -27,7 +31,7 @@ Task #| Task Header | Code/Answer
 7 | Compute R^2 | compute_r_squared.py  
 8 | Gradient Descent | sgd_regressor.py   
 Description of results:  
-We want to see whether rain increases or decreases the usage of subway in New York.  
+We want to see whether the usage of subway in New York increases or decreases depending on rain.  
 Independent variable: rainy days  
 Dependent variable: Number of subway entries per hour  
 Null hypothesis: average numbers of entries per hour are the same on rainy or non-rainy days.  
