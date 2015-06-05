@@ -40,7 +40,7 @@ def plot_weather_data(turnstile_weather):
         #geom_point() + scale_x_date(labels='%d')  
         #geom_point() + \
     turnstile_weather.rename(columns = lambda x: x.replace(' ', '_').lower(), inplace=True)
-    turnstile_weather.columns.values
+    #turnstile_weather.columns.values
     q = """
             select day_of_week, avg(ENTRIESn_hourly) as avg_eph  from turnstile_weather
             group by day_of_week

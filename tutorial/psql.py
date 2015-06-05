@@ -42,3 +42,5 @@ def aggregate_query(filename):
     # Execute your SQL command against the pandas frame
     aadhaar_solution = pandasql.sqldf(q.lower(), locals())
     return aadhaar_solution    
+
+print aggregate_query("aadhaar_data.csv")
