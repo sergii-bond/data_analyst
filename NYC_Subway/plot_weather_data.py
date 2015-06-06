@@ -35,7 +35,7 @@ def plot_weather_data(turnstile_weather):
     turnstile_weather['DATEn'] = turnstile_weather.DATEn.apply(lambda x:
             datetime.datetime.strptime(x, "%Y-%m-%d"))
     turnstile_weather['day_of_week'] = turnstile_weather['DATEn'].apply(lambda
-            x: x.weekday()).astype("category")
+            x: x.strftime("%A")).astype("category")
     #turnstile_weather['DATEn'] = to_datetime(turnstile_weather['DATEn'])
         #geom_point() + scale_x_date(labels='%d')  
         #geom_point() + \

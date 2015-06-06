@@ -2,7 +2,7 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 import matplotlib
-matplotlib.style.use('ggplot')
+#matplotlib.style.use('ggplot')
 
 def entries_histogram(turnstile_weather):
     '''
@@ -27,10 +27,17 @@ def entries_histogram(turnstile_weather):
     '''
     
     plt.figure()
-    turnstile_weather['ENTRIESn_hourly'][turnstile_weather.rain ==
-            1].plot(kind='hist', alpha = 0.5, bins = 100) # your code here to plot a historgram for hourly entries when it is raining
-    turnstile_weather['ENTRIESn_hourly'][turnstile_weather.rain ==
-            0].plot(kind='hist', alpha = 0.5, bins = 100) # your code here to plot a historgram for hourly entries when it is not raining
+    #plt.legend()
+    #plt.set_title('Entries per hour on rainy and non-rainy days')
+    plt.xlim(0, 4000)
+    plt.xlabel('ENTRIESn_Hourly')
+    s1 = turnstile_weather['ENTRIESn_hourly'][turnstile_weather.rain == 1]
+    s1.name = 'rain'
+    s1.plot(kind='hist', alpha = 0.5, bins = 100, legend = True, ) # your code here to plot a historgram for hourly entries when it is raining
+
+    s2 = turnstile_weather['ENTRIESn_hourly'][turnstile_weather.rain == 0]
+    s2.name = 'no rain'
+    s2.plot(kind='hist', alpha = 0.5, bins = 100, legend = True) # your code here to plot a historgram for hourly entries when it is not raining
     return plt
 
 if __name__ == '__main__':
