@@ -34,8 +34,11 @@ def plot_weather_data(turnstile_weather):
     #turnstile_weather = df
     turnstile_weather['DATEn'] = turnstile_weather.DATEn.apply(lambda x:
             datetime.datetime.strptime(x, "%Y-%m-%d"))
+    orderlist = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
     turnstile_weather['day_of_week'] = turnstile_weather['DATEn'].apply(lambda
-            x: x.strftime("%A")).astype("category")
+            x: x.strftime("%A")).astype("category", categories = orderlist, ordered = True)
+    turnstile_weather['day_of_week'].cat.categories
+    turnstile_weather['day_of_week'].cat.ordered
     #turnstile_weather['DATEn'] = to_datetime(turnstile_weather['DATEn'])
         #geom_point() + scale_x_date(labels='%d')  
         #geom_point() + \
@@ -49,7 +52,9 @@ def plot_weather_data(turnstile_weather):
     #df1
     #print df1.columns.values
     #df1 = pandasql.sqldf(q, locals())
-    plot = ggplot(df1, aes(x = 'factor(day_of_week)', y = 'avg_eph')) + \
+    #plot = ggplot(df1, aes(x = 'factor(day_of_week)', y = 'avg_eph')) + \
+    #plot = ggplot(df1, aes(x = 'factor(day_of_week, levels = orderlist)', y = 'avg_eph')) + \
+    plot = ggplot(df1, aes(x = 'factor(day_of_week, levels = orderlist)', y = 'avg_eph')) + \
         geom_bar(stat = 'bar', color = 'green', fill = 'yellow') + \
         xlab("Day of Week") + ylab("Average entries/hour") + \
         ggtitle('Average number of entries per hour depending on a day of the week')

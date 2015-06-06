@@ -32,10 +32,12 @@ def entries_histogram(turnstile_weather):
     plt.xlim(0, 4000)
     plt.xlabel('ENTRIESn_Hourly')
     s1 = turnstile_weather['ENTRIESn_hourly'][turnstile_weather.rain == 1]
+    len(s1)
     s1.name = 'rain'
     s1.plot(kind='hist', alpha = 0.5, bins = 100, legend = True, ) # your code here to plot a historgram for hourly entries when it is raining
 
     s2 = turnstile_weather['ENTRIESn_hourly'][turnstile_weather.rain == 0]
+    len(s2)
     s2.name = 'no rain'
     s2.plot(kind='hist', alpha = 0.5, bins = 100, legend = True) # your code here to plot a historgram for hourly entries when it is not raining
     return plt
