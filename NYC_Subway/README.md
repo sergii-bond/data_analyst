@@ -45,3 +45,6 @@ Task #| Task Header | Code/Answer
 ----|------|------
 1 | Exercise - Visualization 1 | plot_weather_data.py   
 2 | Make Another Visualization | plot_weather_data_2.py   
+
+##Answers to the given questions
+Please see q_and_a.pdf
