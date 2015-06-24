@@ -15,9 +15,16 @@ import xml.etree.ElementTree as ET
 PATENTS = 'patent.data'
 
 def get_root(fname):
+    with open(fname, 'r') as f:
+        i = 1
+        for line in f:
+            if i == 657: 
+                print line
+            if i >= 660: break
+            i += 1
 
     tree = ET.parse(fname)
-        return tree.getroot()
+    return tree.getroot()
 
 
-        get_root(PATENTS)
+get_root(PATENTS)
